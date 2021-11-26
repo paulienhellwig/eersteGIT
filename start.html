@@ -1,4 +1,47 @@
-hoi
-<b>ik ben dik</b>
-<i>ik ben schuin</i>
-<textarea>your name here</textarea>
+<style>
+    h1{
+        background-color:gray;
+        padding:20px;
+        margin:20px;
+    }
+    input{
+        color:orange;
+    }
+    button{
+        font-size: 30px;
+    }
+</style>
+<script>
+    function eersteloop(){
+        var deDOM = document.getElementsByTagName("html");
+        console.log(deDOM);
+        var hetelem = document.getElementById("invoer");
+        console.log(hetelem.value);
+        if(hetelem.value == "eens"){
+            document.getElementById("resultaat").innerHTML = "Hij is het er mee eens";
+            document.getElementById("resultaat").style.backgroundColor = 'green';
+        }
+        else{
+            document.getElementById("resultaat").innerHTML = "Hij is het er niet mee eens";
+            document.getElementById("resultaat").style.backgroundColor = 'red';
+            document.getElementById("resultaat").style.border = '2px solid black';
+        }
+   }
+</script>
+
+
+<script>
+    function tweedeloop(){
+        var hetwoord = document.getElementById("invoer3").value;
+        for(var x=0; x < hetwoord.length; x++){
+            console.log(hetwoord.charAt(x));
+            if(hetwoord.charAt(x)=="e"){
+                alert("er zit een e in")
+            }
+        }
+    }
+</script>
+
+<input type=text id=invoer3 value="tekst in de tekstbox">
+<button onclick="tweedeloop()">Check</button>
+<h1 id=resultaat>resultaat</h1>

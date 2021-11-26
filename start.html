@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <style>
     h1{
         background-color:gray;
@@ -33,33 +33,21 @@
 
 <script>
     function tweedeloop(){
+        var aantale = 0;
         var hetwoord = document.getElementById("invoer3").value;
         for(var x=0; x < hetwoord.length; x++){
             console.log(hetwoord.charAt(x));
             if(hetwoord.charAt(x)=="e"){
-                alert("er zit een e in")
+                aantale += 1;
             }
         }
+        alert("de letter e zit er "+aantale+" keer in")
     }
 </script>
 
 <input type=text id=invoer3 value="tekst in de tekstbox">
 <button onclick="tweedeloop()">Check</button>
 <h1 id=resultaat>resultaat</h1>
-=======
-hoi
-<b>ik ben dik</b>
-<i>ik ben schuin</i>
-<textarea>your name here</textarea>
 
-<script>
-    function eersteloop(deparameter){
-        console.log(deparameter);
-        document.getElementByID("mijntitel").innterHTML = "yes"
-        document.getElementById("mijntitel").style.backgroundColor 
-    }
-</script>
 
-<input type=button value="klik hier" onclick="eersteloop(24)"></input>
-<input type=button value="klik hier" onclick="eersteloop(24)"></input>
->>>>>>> aa372f31a799b690387d6b06b8d07a6df7440987
+
